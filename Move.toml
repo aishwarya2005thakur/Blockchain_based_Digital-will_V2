@@ -1,0 +1,16 @@
+[package]
+name = "blockchain_based_digital-will-V2"
+version = "1.0.0"
+authors = []
+
+[addresses]
+MyModule= "0x624b64c21b0e3580f623bb13ec91aeea0dab8b87147b7cc20f64c80c4dc37251"
+
+[dev-addresses]
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-framework.git"
+rev = "mainnet"
+subdir = "aptos-framework"
+
+[dev-dependencies]
