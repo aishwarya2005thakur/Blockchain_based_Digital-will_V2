@@ -4,10 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { WalletProvider } from '@aptos-labs/wallet-adapter-react';
+import { PetraWallet } from 'petra-plugin-wallet-adapter';
+
+const wallets = [new PetraWallet()];
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <WalletProvider wallets={wallets} autoConnect={true}>
+      <App />
+    </WalletProvider>
   </React.StrictMode>
 );
 
